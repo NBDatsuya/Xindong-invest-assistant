@@ -11,6 +11,11 @@
         "navigationBarTitleText": "风险配置问卷"
       }
     },{
+      "path": "pages/quesnaire/index",
+      "style": {
+        "navigationBarTitleText": "理财产品推荐"
+      }
+    }, {
       "path": "pages/possession/index",
       "style": {
         "navigationBarTitleText": "持仓"
@@ -40,7 +45,11 @@
     },{
       "pagePath": "pages/quesnaire/index",
       "text": "风险问卷"
-    },{
+    },
+      {
+        "pagePath": "pages/recommend/index",
+        "text": "理财推荐"
+      },{
       "pagePath": "pages/tradeRecord/index",
       "text": "交易记录"
     },{
