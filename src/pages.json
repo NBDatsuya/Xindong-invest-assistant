@@ -25,6 +25,16 @@
       "style": {
         "navigationBarTitleText": "模拟投资"
       }
+    },{
+      "path": "pages/investSimulation/purchase",
+      "style": {
+        "navigationBarTitleText": "模拟购买"
+      }
+    },{
+      "path": "pages/investSimulation/done",
+      "style": {
+        "navigationBarTitleText": "完成模拟购买"
+      }
     }
   ],
   "globalStyle": {

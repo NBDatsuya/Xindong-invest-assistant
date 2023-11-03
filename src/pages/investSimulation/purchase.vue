@@ -1,6 +1,6 @@
 <script setup lang="ts">
-const nextStep = ()=>{
-    uni.navigateTo({url:'/pages/investSimulation/purchase'})
+const done = ()=>{
+    uni.navigateTo({url:'/pages/investSimulation/done'})
 }
 </script>
 
@@ -12,12 +12,10 @@ const nextStep = ()=>{
         </view>
         
     </view>
-
     <button size="mini" type="default" 
 	style="color:#ffffff;backgroundColor:#FF0000;borderColor:#179b16" 
 	hover-class="is-hover"
-    @click="nextStep">下一步</button>
-    
+    @click='done'>提交</button>
 </template>
 
 <style scoped>
