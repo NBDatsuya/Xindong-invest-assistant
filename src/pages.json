@@ -10,6 +10,21 @@
       "style": {
         "navigationBarTitleText": "风险配置问卷"
       }
+    },{
+      "path": "pages/possession/index",
+      "style": {
+        "navigationBarTitleText": "持仓"
+      }
+    },{
+      "path": "pages/tradeRecord/index",
+      "style": {
+        "navigationBarTitleText": "交易记录查看"
+      }
+    },{
+      "path": "pages/investSimulation/index",
+      "style": {
+        "navigationBarTitleText": "模拟投资"
+      }
     }
   ],
   "globalStyle": {
@@ -25,6 +40,15 @@
     },{
       "pagePath": "pages/quesnaire/index",
       "text": "风险问卷"
+    },{
+      "pagePath": "pages/tradeRecord/index",
+      "text": "交易记录"
+    },{
+      "pagePath": "pages/investSimulation/index",
+      "text": "模拟投资"
+    },{
+      "pagePath": "pages/possession/index",
+      "text": "我的持仓"
     }]
   }
 }
