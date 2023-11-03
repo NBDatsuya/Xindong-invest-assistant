@@ -11,7 +11,7 @@
         "navigationBarTitleText": "风险配置问卷"
       }
     },{
-      "path": "pages/quesnaire/index",
+      "path": "pages/recommend/index",
       "style": {
         "navigationBarTitleText": "理财产品推荐"
       }
