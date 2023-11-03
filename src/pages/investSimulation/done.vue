@@ -6,7 +6,7 @@
 
     <view class='content'>
         <view class='text-area'>
-            <text class='title' color="$uni-color-primary">测试</text>
+            <text class='title' color="$uni-color-primary">可以前往模拟持仓界面查看模拟购买的理财产品\n购买产品24小时后可查看产品受益预测</text>
         </view>
         
     </view>
