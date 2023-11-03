@@ -11,6 +11,11 @@
         "navigationBarTitleText": "风险配置问卷"
       }
     },{
+      "path": "pages/recommend/index",
+      "style": {
+        "navigationBarTitleText": "理财产品推荐"
+      }
+    }, {
       "path": "pages/possession/index",
       "style": {
         "navigationBarTitleText": "持仓"
@@ -25,8 +30,25 @@
       "style": {
         "navigationBarTitleText": "模拟投资"
       }
+    },{
+      "path": "pages/investSimulation/purchase",
+      "style": {
+        "navigationBarTitleText": "模拟购买"
+      }
+    },{
+      "path": "pages/investSimulation/done",
+      "style": {
+        "navigationBarTitleText": "完成模拟购买"
+      }
     }
   ],
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+    }
+  },
+
   "globalStyle": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
@@ -40,7 +62,11 @@
     },{
       "pagePath": "pages/quesnaire/index",
       "text": "风险问卷"
-    },{
+    },
+      {
+        "pagePath": "pages/recommend/index",
+        "text": "理财推荐"
+      },{
       "pagePath": "pages/tradeRecord/index",
       "text": "交易记录"
     },{
