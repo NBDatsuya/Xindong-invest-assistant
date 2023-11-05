@@ -23,10 +23,10 @@ const nextStep = ()=>{
 
     <view>
 		<view class="uni-container">
-			<uni-table ref="table" :loading="loading" border stripe type="selection" emptyText="暂无更多数据" @selection-change="selectionChange">
+			<uni-table ref="table" :loading="loading" border stripe type="selection" emptyText="暂无更多数据" 
+			@selection-change="selectionChange">
 				<uni-tr>
-					<uni-th width="150" align="center">产品</uni-th>
-					
+					<uni-th align="left">产品</uni-th>
 				</uni-tr>
 				<uni-tr v-for="(item, index) in tableData" :key="index">
 					<uni-td>

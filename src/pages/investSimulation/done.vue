@@ -1,5 +1,7 @@
 <script setup lang="ts">
-
+const possessionIndex = ()=>{
+    uni.navigateTo({url:'/pages/possession/index'})
+}
 </script>
 
 <template>
@@ -12,7 +14,8 @@
     </view>
     <button size="default" type="default" 
 	style="color:#ffffff;backgroundColor:#179b16;borderColor:#179b16" 
-	hover-class="is-hover">点击查看模拟持仓</button>
+	hover-class="is-hover"
+    @click="possessionIndex">点击查看模拟持仓</button>
 </template>
 
 <style scoped>
