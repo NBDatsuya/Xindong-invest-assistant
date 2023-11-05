@@ -219,7 +219,7 @@ button.search-button {
 }
 
 .product-section {
-  display: flex;
+  /*display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #f9f9f9;
@@ -227,7 +227,12 @@ button.search-button {
   border-radius: 5px;
   padding: 20px;
   margin: 10px 0;
-  width: 95%;
+  width: 95%;*/
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #f9f9f9;
 }
 
 .product-info {

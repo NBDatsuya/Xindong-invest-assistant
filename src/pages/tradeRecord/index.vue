@@ -36,7 +36,6 @@ const tradeRecordList = ref([{
                 <uni-td align="center">{{item.dealTime}}</uni-td>
             </uni-tr>
         </uni-table>
-
     </view>
 </template>
 
