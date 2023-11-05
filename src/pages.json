@@ -23,7 +23,7 @@
     },{
       "path": "pages/tradeRecord/index",
       "style": {
-        "navigationBarTitleText": "交易记录查看"
+        "navigationBarTitleText": "交易记录"
       }
     },{
       "path": "pages/investSimulation/index",
