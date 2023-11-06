@@ -17,6 +17,12 @@
       }
     },
     {
+      "path": "pages/recommenddetail/index",
+      "style": {
+        "navigationBarTitleText": "产品详细信息"
+      }
+    },
+    {
       "path": "pages/possession/index",
       "style": {
         "navigationBarTitleText": "持仓"

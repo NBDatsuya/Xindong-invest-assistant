@@ -23,7 +23,7 @@
             <h3>{{ product.name }}</h3>
             <p>{{ product.description }}</p>
           </div>
-          <button @click="viewDetails(product)" class="blue-button">查看详情</button>
+          <button  class="blue-button" @click="nextStep">查看详情</button>
         </div>
       </div>
       <div class="pagination">
@@ -38,7 +38,9 @@
 </template>
 
 <script>
+
 export default {
+
   name: "SearchBar",
   data() {
     return {
@@ -97,6 +99,12 @@ export default {
     this.search();
   },
   methods: {
+    nextStep() {
+      // 实现页面跳转
+      uni.navigateTo({ url: '/pages/recommenddetail/index'
+
+      });
+    },
     search() {
       if (this.searchQuery.trim() === "") {
         this.searchResult = this.financialProducts[this.selectedContent]; // 显示所有产品
@@ -116,9 +124,7 @@ export default {
       // 搜索
       this.search();
     },
-    viewDetails(product) {
-      console.log("查看详情：", product.name);
-    },
+
     nextPage() {
       if (this.currentPage < this.totalPages) {
         this.currentPage++;
@@ -131,6 +137,7 @@ export default {
     },
   },
 };
+
 </script>
 
 <style scoped>
@@ -217,22 +224,13 @@ button.search-button {
   align-items: center;
   width: 1150px;
 }
-
 .product-section {
-  /*display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
-  margin: 10px 0;
-  width: 95%;*/
   border: 1px solid #ccc;
   padding: 20px;
   margin: 10px 0;
   border-radius: 5px;
-  background-color: #f9f9f9;
+  background-color: #f0f0f0; /* 设置背景颜色为浅灰色 */
+  width: 90%;
 }
 
 .product-info {
