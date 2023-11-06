@@ -19,7 +19,7 @@
       }
     },
     {
-      "path": "pages/recommenddetail/index",
+      "path": "pages/recommend/detail",
       "style": {
         "navigationBarTitleText": "产品详细信息"
       }

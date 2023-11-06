@@ -1,6 +1,5 @@
 <template>
   <div class="product-details">
-
     <h1 class="product-name">{{ product.name }}</h1>
 
     <div class="product-info">
@@ -29,8 +28,6 @@
 </template>
 
 <script>
-
-
 export default {
   data() {
     return {
@@ -41,18 +38,23 @@ export default {
       },
     };
   },
-   methods: {
-     returnrecommend() {
-       // 实现页面跳转
-       uni.navigateTo({ url: '/pages/recommend/index'
-       });
-     },
-   },
 };
 </script>
 
 <style scoped>
-
+.back-button {
+  background-color: lightskyblue;
+  color: white;
+  border: none;
+  width: 65px;
+  height: 55px;
+  position: absolute;
+  top: 5px;
+  left:5px;
+  font-size: 15px;
+  text-align: center; /* 居中文本 */
+  line-height: 55px; /* 垂直居中文本 */
+}
 .product-details {
   text-align: center;
   max-width: 600px;
