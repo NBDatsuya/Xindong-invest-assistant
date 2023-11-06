@@ -20,9 +20,7 @@ const nextStep = () => {
 
 
     </uni-section>
-
-    <view>
-<<<<<<< HEAD
+		
 		<view class="uni-container">
 			<uni-table ref="table" :loading="loading" border stripe type="selection" emptyText="暂无更多数据" 
 			@selection-change="selectionChange">
@@ -39,14 +37,11 @@ const nextStep = () => {
 			</uni-table>
 			<view class="uni-pagination-box"><uni-pagination show-icon :page-size="pageSize" :current="pageCurrent" :total="total" @change="change" /></view>
 		</view>
-	</view>
-=======
         <view class="uni-container">
             <uni-table ref="table" :loading="loading" border stripe type="selection" emptyText="暂无更多数据"
                        @selection-change="selectionChange">
                 <uni-tr>
                     <uni-th width="150" align="center">产品</uni-th>
->>>>>>> 3250015b8b9a37260ecd05d4f98e5bccc8e09a7f
 
                 </uni-tr>
                 <uni-tr v-for="(item, index) in tableData" :key="index">
@@ -66,7 +61,6 @@ const nextStep = () => {
                 hover-class="is-hover"
                 @click="nextStep">下一步
         </button>
-    </view>
 </template>
 
 <style scoped>
