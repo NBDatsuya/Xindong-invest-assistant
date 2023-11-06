@@ -5,12 +5,14 @@
       "style": {
         "navigationBarTitleText": "信东智能投顾"
       }
-    },{
+    },
+    {
       "path": "pages/quesnaire/index",
       "style": {
         "navigationBarTitleText": "风险配置问卷"
       }
-    },{
+    },
+    {
       "path": "pages/recommend/index",
       "style": {
         "navigationBarTitleText": "理财产品推荐"
@@ -27,22 +29,26 @@
       "style": {
         "navigationBarTitleText": "持仓"
       }
-    },{
+    },
+    {
       "path": "pages/tradeRecord/index",
       "style": {
         "navigationBarTitleText": "交易记录"
       }
-    },{
+    },
+    {
       "path": "pages/investSimulation/index",
       "style": {
         "navigationBarTitleText": "模拟投资"
       }
-    },{
+    },
+    {
       "path": "pages/investSimulation/purchase",
       "style": {
         "navigationBarTitleText": "模拟购买"
       }
-    },{
+    },
+    {
       "path": "pages/investSimulation/done",
       "style": {
         "navigationBarTitleText": "完成模拟购买"
@@ -55,7 +61,6 @@
       "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
     }
   },
-
   "globalStyle": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
@@ -63,26 +68,27 @@
     "backgroundColor": "#F8F8F8"
   },
   "tabBar": {
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页"
-    },{
-      "pagePath": "pages/quesnaire/index",
-      "text": "风险问卷"
-    },
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/quesnaire/index",
+        "text": "风险问卷"
+      },
       {
         "pagePath": "pages/recommend/index",
         "text": "理财推荐"
       },
-     {
-      "pagePath": "pages/tradeRecord/index",
-      "text": "交易记录"
-    },{
-      "pagePath": "pages/investSimulation/index",
-      "text": "模拟投资"
-    },{
-      "pagePath": "pages/possession/index",
-      "text": "我的持仓"
-    }]
+      {
+        "pagePath": "pages/investSimulation/index",
+        "text": "模拟投资"
+      },
+      {
+        "pagePath": "pages/possession/index",
+        "text": "我的持仓"
+      }
+    ]
   }
 }
