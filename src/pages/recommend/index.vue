@@ -6,7 +6,7 @@
     </div>
     <nav class="indicators">
       <div
-          v-for="(indicator, index) in ['综合', '灵活度', '回报率', '风险']"
+          v-for="(indicator, index) in ['综合', '灵活度', '收益率', '非风险性']"
           :key="index"
           @click="showContent(indicator)"
           :class="{ active: activeIndicator === indicator }"
@@ -46,47 +46,24 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="js">
 import {computed, ref} from "vue";
 
 const searchQuery = ref("")
 const selectedContent = ref("comprehensive")
 const activeIndicator = ref("comprehensive")
 
-const financialProducts = ref({
-  "comprehensive": [
-    {name: "Product 1", description: "产品 1 的描述"},
-    {name: "Product 2", description: "产品 2 的描述"},
-    {name: "Product 9", description: "产品 9 的描述"},
-    {name: "Product 10", description: "产品 10 的描述"},
-  ],
-  "flexibility": [
-    {name: "Product 3", description: "产品 3 的描述"},
-    {name: "Product 4", description: "产品 4 的描述"},
-  ],
-  "returnRate": [
-    {name: "Product 5", description: "产品 5 的描述"},
-    {name: "Product 6", description: "产品 6 的描述"},
-    {name: "Product 11", description: "产品 11 的描述"},
-  ],
-  "risk": [
-    {name: "Product 7", description: "产品 7 的描述"},
-    {name: "Product 8", description: "产品 8 的描述"},
-  ],
-})
+const financialProducts = ref([{
+  "id": 0,
+  "name": "string",
+  "details": "string",
+  "price": 0,
+  "antiRisk": 0,
+  "flexibility": 0,
+  "returnRate": 0,
+  "state": 0
+}]);
 
-const filteredProducts = computed(() => {
-  if (!searchQuery.value) {
-    return financialProducts.value[selectedContent.value];
-  }
-
-  const query = searchQuery.value.toLowerCase();
-  return financialProducts.value[selectedContent.value].filter(
-      (product) =>
-          product.name.toLowerCase().includes(query) ||
-          product.description.toLowerCase().includes(query)
-  );
-})
 
 const visibleProducts = computed(() => {
   const start = (currentPage.value - 1) * itemsPerPage.value;
@@ -99,7 +76,7 @@ const totalPages = computed(() => {
 })
 
 
-const itemsPerPage = ref(3)
+const itemsPerPage = ref(3)//每页上只显示3个产品
 const currentPage = ref(1)
 const searchResult = ref([])
 
@@ -109,7 +86,25 @@ const nextStep = () => {
 }
 
 const initComponent = () => {
-  search()
+  //search()
+
+  uni.request({
+    url: '/api/product/sortByComprehensive',
+    method: 'GET',
+    success: (res) => {
+      if (res.data['code'] === 200) {
+        // 从响应中获取数据
+        financialProducts.value
+            = res.data['data'];
+        console.log(financialProducts)
+      } else {
+        // 处理请求失败的情况
+      }
+    },
+    fail: (err) => {
+      // 处理请求失败的情况
+    }
+  });
 }
 
 const search = () => {
@@ -127,7 +122,7 @@ const search = () => {
   currentPage.value = 1; // 将当前页重置为第一页
 }
 
-const showContent = (content: string) => {
+const showContent = (content) => {
   selectedContent.value = content;
   activeIndicator.value = content;
   // 搜索
@@ -149,9 +144,6 @@ initComponent()
 
 </script>
 
-<style scoped>
-/* 样式保持不变 */
-</style>
 
 
 <style scoped>
