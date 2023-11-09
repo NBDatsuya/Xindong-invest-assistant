@@ -28,7 +28,7 @@
 <script setup lang="ts">
 import {computed, ref} from 'vue';
 import {indexToAlphabets} from "../../ts/transcript";
-
+// 以这个版本为准
 const questions = ref([
     {
         "title": {
