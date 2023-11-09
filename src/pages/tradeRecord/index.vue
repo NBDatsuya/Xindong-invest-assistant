@@ -14,7 +14,7 @@ const tradeRecordList = ref([{
 </script>
 
 <template>
-    <view>
+    <view >
         <uni-table border stripe emptyText="暂无更多数据">
             <!-- 表头行 -->
             <uni-tr>
