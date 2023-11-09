@@ -26,3 +26,8 @@ export function localTime(source: string, shift: boolean = false) {
         )}:${String(second)}`
     }
 }
+
+export function indexToAlphabets(id: number) {
+    let A = 65
+    return String.fromCharCode(id + A)
+}
