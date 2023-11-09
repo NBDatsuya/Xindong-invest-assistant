@@ -8,7 +8,24 @@
 </template>
 
 <script setup lang="ts">
-
+uni.request({
+  url: '/api/product/sortByComprehensive',
+  method: 'GET',
+  success: (res: AnyObject) => {
+    console.log(res.data)
+    if (res.data['code'] === 200) {
+      // 从响应中获取数据
+      let financialProducts
+          = res.data['data'];
+      console.log(financialProducts)
+    } else {
+      // 处理请求失败的情况
+    }
+  },
+  fail: (err) => {
+    // 处理请求失败的情况
+  }
+});
 </script>
 
 <style>
