@@ -50,7 +50,14 @@ const questions = ref([
 const answers = /*Array(questions.value.length).fill('')*/
     ref<Array<Object>>([])
 const doSubmit = () => {
-    alert(answers.value)
+      var r=confirm("确认提交")
+    if (r==true)
+    {
+      uni.switchTab({
+        url: "../../pages/recommend/index"
+      });
+    }
+
 }
 const initComponent = () => {
     uni.request({
